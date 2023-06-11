@@ -1,0 +1,10 @@
+<?php
+
+class M_login extends CI_Model
+{
+
+    public function cekLogin($username, $password)
+    {
+        return $this->db->query("SELECT * FROM login WHERE username='$username' AND password='$password'");
+    }
+}
